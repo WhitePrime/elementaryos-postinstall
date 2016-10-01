@@ -5,7 +5,7 @@
 #01 - Manter tudo atualizado
     sudo apt update
     sudo apt upgrade -y
-    sudo apt updade -y
+    sudo apt update -y
     sudo apt dist-upgrade -y
     
 #02 - Primeira limpeza
