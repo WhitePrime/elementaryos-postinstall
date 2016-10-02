@@ -53,7 +53,7 @@
 	sudo apt clean -y
 	sudo apt autoclean -y
 	sudo apt autoremove -y
-	sudo apt install -fy
+	sudo apt install -f -y
 
 # - Adicionando repositórios (Desmarque aqueles que julgar necessário)
 	sudo add-apt-repository -y 'ppa:atareao/atareao'
@@ -79,7 +79,7 @@
 	sudo apt install -y ffmpeg lame libdvdread4 libavcodec-extra
 	
 # - Instalar compiladores
-	sudo apt install -y bwbasic codeblocks clang cmake make cpp cppcheck g++ "g++-multilib" gcc "gcc-multilib" colorgcc gperf python gfortran gfortran-doc ratfor fpc fpc-source ruby ruby-dev
+	sudo apt install -y bwbasic clang cmake make cpp cppcheck g++ "g++-multilib" gcc "gcc-multilib" colorgcc gperf python gfortran gfortran-doc ratfor fpc fpc-source ruby ruby-dev
 	ln -s /usr/bin/colorgcc /usr/local/sbin/g++
 	ln -s /usr/bin/colorgcc /usr/local/sbin/gcc
 
