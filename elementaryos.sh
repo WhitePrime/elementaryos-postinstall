@@ -258,10 +258,9 @@
 	#sudo apt install -y geary
 
 # Google Chrome
-	sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 	wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+	sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google-chrome.list'
 	sudo apt update;sudo apt autoremove -y
-	#sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/etc/apt/sources.list.d/google.list" && sudo sed -i -e 's/deb http/deb [arch=amd64] http/' "/opt/google/chrome/cron/google-chrome"
 	sudo apt install -y google-chrome-stable
 
 # HexChat (IRC)
@@ -491,12 +490,12 @@
 	sudo apt update;sudo apt autoremove -y
 	sudo apt install -y elementary-tweaks
 
+# Pepper Flash Player/Fresh Player Plugin
+	sudo add-apt-repository -y ppa:nilarimogard/webupd8
+	sudo apt update;sudo apt autoremove -y
+	sudo apt install -y pepperflashplugin-nonfree freshplayerplugin
+
 #### DESCONTINUADOS ####
-# Flash Players
-	#sudo apt install -y adobe-flashplugin
-    sudo apt install -y flashplugin-installer
-    #sudo apt install -y flashplugin-nonfree
-    sudo apt install -y pepperflashplugin-nonfree
 
 # Pipelight
 	#sudo add-apt-repository -y ppa:pipelight/stable
