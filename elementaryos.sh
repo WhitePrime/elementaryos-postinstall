@@ -274,7 +274,7 @@
 	sudo apt install -y telegram
 
 # Ferramentas de Desenvolvimento
-	sudo apt install -y codeblocks eclipse gambas3 gitk git-core meld lazarus monodevelop netbeans nodejs npm ruby ruby-dev
+	sudo apt install -y eclipse gambas3 gitk git-core meld lazarus monodevelop netbeans nodejs npm ruby ruby-dev
 	ln -s /usr/bin/nodejs /usr/bin/node
     curl https://install.meteor.com/ | sh
 
@@ -297,6 +297,11 @@
 	sudo add-apt-repository -y ppa:webupd8team/brackets
 	sudo apt update;sudo apt autoremove -y
 	sudo apt install -y brackets
+
+# Code::Blocks
+	sudo add-apt-repository -y ppa:damien-moore/codeblocks-stable
+	sudo apt update;sudo apt autoremove -y
+	sudo apt install -y codeblocks
 
 # Compiladores Python
 	#sudo add-apt-repository -y ppa:fkrull/deadsnakes
