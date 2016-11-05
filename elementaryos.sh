@@ -25,10 +25,9 @@
 
 # - Preload
 	sudo apt install -y preload
-	sudo sed -i 's|^cycle *=.*|cycle = 25|' /etc/preload.conf
-	sudo sed -i 's|^memfree *=.*|memfree = 60|' /etc/preload.conf
-	sudo sed -i 's|^memcached *=.*|memcached = 15|' /etc/preload.conf
-	sudo sed -i 's|^mapprefix *=.*|mapprefix = /usr/;/lib;/var/cache/;/opt/;!/|' /etc/preload.conf
+	sudo sed -i 's|^cycle *=.*|cycle = 30|' /etc/preload.conf
+	sudo sed -i 's|^memcached *=.*|memcached = 20|' /etc/preload.conf
+	sudo sed -i 's|^mapprefix *=.*|mapprefix = /usr/;/lib;/opt/;/var/cache/;!/|' /etc/preload.conf
 	sudo sed -i 's|^exeprefix *=.*|exeprefix = !/usr/sbin/;!/usr/local/sbin/;/usr/;/opt/;!/|' /etc/preload.conf
 	sudo /etc/init.d/preload restart
 
@@ -40,11 +39,10 @@
 	sudo prelink -amvR
     
 # - Alguns Tunning
-	sudo echo 'vm.vfs_cache_pressure = 500' >> /etc/sysctl.conf
-	sudo echo 'vm.dirty_background_ratio = 5' >> /etc/sysctl.conf
+	sudo echo 'vm.vfs_cache_pressure = 200' >> /etc/sysctl.conf
+	sudo echo 'vm.dirty_background_ratio = 8' >> /etc/sysctl.conf
 	sudo echo 'vm.dirty_ratio = 25' >> /etc/sysctl.conf
 	sudo echo 'vm.swappiness = 10' >> /etc/sysctl.conf
-	sudo echo 'vm.page-cluster = 4' >> /etc/sysctl.conf
 	sudo sed -i s/NoDisplay=true/NoDisplay=false/g /etc/xdg/autostart/*.desktop
 
 ## - Reiniciar o computador após estas últimas instalações ##
